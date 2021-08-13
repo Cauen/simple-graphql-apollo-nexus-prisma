@@ -1,6 +1,6 @@
 import { objectType } from 'nexus'
 
-export const Post = objectType({
+export default objectType({
   name: 'CustomPost',
   definition(t) {
     t.model('Post').id()

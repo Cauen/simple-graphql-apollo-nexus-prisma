@@ -4,7 +4,7 @@ import {
   queryField,
 } from 'nexus'
 
-export const postQueries = queryField((t) => {
+export default queryField((t) => {
   t.field('randomPost', {
     type: 'CustomPost',
     args: {

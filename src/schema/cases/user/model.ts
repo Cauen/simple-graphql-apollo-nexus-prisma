@@ -1,6 +1,6 @@
 import { objectType } from 'nexus'
 
-export const User = objectType({
+export default objectType({
   name: 'User',
   definition(t) {
     t.model.id()
