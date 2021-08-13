@@ -8,5 +8,6 @@ export const Post = objectType({
     t.model('Post').tags()
     t.model('Post').status()
     t.model('Post').user()
+    t.model("Post").blog()
   },
 })

@@ -1,11 +1,12 @@
 import * as NexusSchema from 'nexus'
 import { nexusPrisma } from 'nexus-plugin-prisma'
 import * as path from 'path'
-import * as types from './types'
+import * as cases from './cases'
 import { ApolloError } from 'apollo-server-express';
+import { validatePlugin } from 'nexus-validate';
 
 export default NexusSchema.makeSchema({
-  types,
+  types: cases,
   plugins: [
     nexusPrisma({
       experimentalCRUD: true,
@@ -14,7 +15,8 @@ export default NexusSchema.makeSchema({
       formatError: (({ error }) => 
         new ApolloError(error.message, '10')
       )
-    })
+    }),
+    validatePlugin(),
   ],
   outputs: {
     typegen: path.join(

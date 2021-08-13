@@ -22,7 +22,9 @@
     "graphql": "^15.4.0",
     "graphql-yoga": "^1.18.2",
     "nexus": "^1.0.0",
-    "nexus-plugin-prisma": "0.35.0"
+    "nexus-plugin-prisma": "0.35.0",
+    "nexus-validate": "^1.0.0",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "@types/faker": "^5.1.5",
